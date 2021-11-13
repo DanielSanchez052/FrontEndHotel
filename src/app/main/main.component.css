@@ -1,0 +1,25 @@
+#banner{
+  background-image:
+    /* linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), */
+  url("./../../assets/img/Banner.jpg");
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  padding: 10% 2% 40% 2%;
+  z-index: 1;
+
+}
+
+#banner::after{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index:-1;
+}
