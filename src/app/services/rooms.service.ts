@@ -13,4 +13,8 @@ export class RoomsService {
   getRooms():Observable<any>{
     return this.request.get('https://apihotelavanzada.herokuapp.com/api/v1/room')
   }
+
+  addReserve(data:Object): Observable<any>{
+    return this.request.post('https://apihotelavanzada.herokuapp.com/api/v1/reservation/', data)
+  }
 }

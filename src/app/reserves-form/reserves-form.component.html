@@ -3,21 +3,21 @@
     <h4>Reservas</h4>
     <hr>
     <h4>Desde 100 USD</h4>
-    <form action="#" >
+    <form (ngSubmit)="crearReserva(formulario)" #formulario="ngForm">
       <div class="row">
         <div class="col">
           <label for="dateStart" class="form-label">Entrada</label>
-          <input type="date" class="form-control" id="dateStart">
+          <input type="date" class="form-control" id="dateStart" name="entrada" ngModel required>
         </div>
         <div class="col">
           <label for="dateEnd" class="form-label">Salida</label>
-          <input type="date" class="form-control" id="dateEnd">
+          <input type="date" class="form-control" id="dateEnd" name="salida" ngModel required>
         </div>
       </div>
       <div class="row mt-2">
         <div class="col">
           <label for="adult" class="form-label">Adultos</label>
-          <select class="form-select  mb-3" aria-label="Default select">
+          <select class="form-select  mb-3" aria-label="Default select" name="adultos" ngModel required>
             <option selected>--- select ---</option>
             <option value="0">0</option>
             <option value="1">1</option>
@@ -27,7 +27,7 @@
         </div>
         <div class="col">
           <label for="boy" class="form-label">Niños</label>
-          <select class="form-select  mb-3" aria-label="Default select">
+          <select class="form-select  mb-3" aria-label="Default select" name="niños" ngModel required>
             <option selected>--- select ---</option>
             <option value="0">0</option>
             <option value="1">1</option>
